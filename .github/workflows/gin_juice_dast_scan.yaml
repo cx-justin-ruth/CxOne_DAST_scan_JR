@@ -11,7 +11,7 @@ on:
   workflow_dispatch: # *** this adds a run button ***
 
 permissions:
-  contents: read
+  contents: write
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -43,7 +43,7 @@ jobs:
         output: ./output
     - name: Reclaim output directory  
       if: always()  
-      run: sudo chown -R 1001:1001 ${{ github.workspace }}/output
+      run: sudo mkdir ${{ github.workspace }}/output; sudo chown -R 1001:1001 ${{ github.workspace }}/output
     - uses: actions/upload-artifact@v3
       if: always()
       name: Upload Logs
