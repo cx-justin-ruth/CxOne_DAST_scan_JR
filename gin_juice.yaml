@@ -108,7 +108,7 @@ jobs:
   #  type: "report"
   - parameters:
       template: "traditional-pdf"
-      reportDir: "./output"
+      reportDir: "./output/report"
       reportTitle: "ZAP Scanning Report - Jason is awesome"
       reportDescription: ""
     name: "report-pdf"
