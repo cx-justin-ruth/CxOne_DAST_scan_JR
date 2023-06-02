@@ -108,7 +108,7 @@ jobs:
   #  type: "report"
   - parameters:
       template: "traditional-pdf"
-      reportDir: "${{github.workspace}}/output/report"
+      reportDir: "${{github.workspace}}/output"
       reportTitle: "ZAP Scanning Report - Jason is awesome"
       reportDescription: ""
     name: "report-pdf"
