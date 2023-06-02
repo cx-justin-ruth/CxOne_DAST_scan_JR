@@ -38,7 +38,7 @@ jobs:
         # openapi: file here
         base_url: "https://deu.ast.checkmarx.net" #"https://ast.checkmarx.net"
         environment_id: "7ed62b34-898b-409f-91ff-a1a9d74bdef4" #"2f776f4a-dfda-46d1-9fda-b879307d9b76"
-        fail_on: "HIGH"
+        fail_on: "high"
         verbose: true
         output: ${{ github.workspace }}/output/report
     - name: Reclaim output directory  
