@@ -30,7 +30,7 @@ jobs:
     - name: Create Output folder
       run: sudo mkdir ${{ github.workspace }}/output/report
     #- name: change owner
-    #  run: sudo chown -R 1000:1000 ${{ github.workspace }}/output
+    #  run: sudo chown -R 1000:1000 ${{ github.workspace }}
     # Scan
     - name: Checkmarx DAST Github Action
       uses: Checkmarx/dast-github-action@v1.0.4
