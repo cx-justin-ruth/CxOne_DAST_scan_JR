@@ -20,14 +20,14 @@ jobs:
       - name: Change dir owner
         run: sudo chown -R 1000:1000 ${{ github.workspace }}
       - name: ls dirs
-        run: ls -larh ${{ github.workspace }}
+        run: ls -larh ${{ github.repository }}
       - name: Checkmarx DAST Github Action
         uses: Checkmarx/dast-github-action@v1.0.4
         env:
           CX_APIKEY: ${{ secrets.CX_APIKEY }}
         with:
           command: web
-          config: ${{ github.workspace }}/gin_jucie.yaml
+          config: ${{ github.repository }}/gin_jucie.yaml
           environment_id: ddd817b7-f0a6-4463-9c87-45bbeb150678 
           fail_on: "HIGH"
           log_level: info
