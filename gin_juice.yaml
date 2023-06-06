@@ -101,14 +101,14 @@ jobs:
     type: "activeScan"
   #- parameters:
   #    template: "risk-confidence-html"
-  #    reportDir: "${{github.workspace}}/output/report"
+  #    reportDir: "./output/report"
   #    reportTitle: "ZAP Scanning Report"
   #    reportDescription: "jason_is_awesome"
   #  name: "report"
   #  type: "report"
   - parameters:
       template: "traditional-pdf"
-      reportDir: "${{github.workspace}}/output"
+      reportDir: "./output"
       reportTitle: "ZAP Scanning Report - Jason is awesome"
       reportDescription: ""
     name: "report-pdf"
