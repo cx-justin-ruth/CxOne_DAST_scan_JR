@@ -28,14 +28,14 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v3
     - name: Create Output folder
-      run: sudo mkdir ${{ github.workspace }}/output/report
+      run: sudo mkdir ./output/report
     # echo variable tets
     - name: echo repo for testing
       run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
     - name: echo repo for testing
       run: echo "🖥️ The workflow is now ready to test your code on the runner."
     - name: List files in the repository
-      run: ls ${{ github.workspace }}
+      run: ls ./
     - name: echo repo for testing
       run: echo "🍏 This job's status is ${{ job.status }}."
     # Scan
@@ -51,13 +51,13 @@ jobs:
         environment_id: "7ed62b34-898b-409f-91ff-a1a9d74bdef4" #"2f776f4a-dfda-46d1-9fda-b879307d9b76"
         fail_on: "high"
         verbose: true
-        output: ${{ github.workspace }}/output/report
+        output: ./output
     - name: Reclaim output directory  
       if: always()  
-      run: sudo chown -R 1001:1001 ${{ github.workspace }}/output/report
+      run: sudo chown -R 1001:1001 ./output
     - uses: actions/upload-artifact@v3
       if: always()
       name: Upload Logs
       with:
         name: report
-        path: ${{ github.workspace }}/output/report
+        path: ./output
