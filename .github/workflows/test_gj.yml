@@ -28,10 +28,10 @@ jobs:
         with:
           command: web
           config: ${{ github.workspace }}/gin_juice.yaml
-          environment_id: ddd817b7-f0a6-4463-9c87-45bbeb150678 
+          environment_id: 7ed62b34-898b-409f-91ff-a1a9d74bdef4 
           fail_on: "HIGH"
           log_level: info
-          base_url: https://deu.ast.checkmarx.net/
+          base_url: https://deu.ast.checkmarx.net
           verbose: true
           output: ${{ github.workspace }}/output
       - name: Change dir owner back to gh user
