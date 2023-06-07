@@ -83,8 +83,8 @@ jobs:
   #  type: "report"
   - parameters:
       template: "traditional-pdf"
-      reportDir: ""
-      reportTitle: "ZAP Scanning Report"
+      reportDir: "./output"
+      reportTitle: "Sean Casey leads by example"
       reportDescription: ""
     name: "report-pdf"
     type: "report"
