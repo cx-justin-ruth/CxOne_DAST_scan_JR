@@ -27,8 +27,8 @@ jobs:
           CX_APIKEY: ${{ secrets.CX_APIKEY }}
         with:
           command: web
-          config: ${{ github.workspace }}/altoro_mutual.json
-          environment_id: d844fb87-4ae2-43eb-9649-d9e79b13acec 
+          config: ${{ github.workspace }}/altoro_mutual_dast_scan.yaml
+          environment_id: d844fb87-4ae2-43eb-9649-d9e79b13acec
           fail_on: "HIGH"
           log_level: info
           base_url: https://deu.ast.checkmarx.net
