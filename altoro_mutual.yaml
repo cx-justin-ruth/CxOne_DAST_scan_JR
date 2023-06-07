@@ -47,7 +47,7 @@ jobs:
     name: "passiveScan-config"
     type: "passiveScan-config"
   - parameters:
-      apiFile: "C:\\Users\\joaor\\OneDrive - Checkmarx\\Desktop\\dast - testfire\\openapi.json"
+      apiFile: "./altoro_mutual.json"
       apiUrl: ""
       targetUrl: "http://testfire.net/"
       context: "Default Context"
